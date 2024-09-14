@@ -45,3 +45,4 @@ app.*.map.json
 # Security
 /ios/Runner/WebinarX-Firebase.plist
 /google-services.json
+/ios/Runner/Info.plist

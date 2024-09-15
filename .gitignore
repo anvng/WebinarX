@@ -44,3 +44,4 @@ app.*.map.json
 
 # Security
 ios/Runner/WebinarX-Firebase.plist
+android/app/google-services.json

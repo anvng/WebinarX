@@ -35,4 +35,5 @@ Runner/GeneratedPluginRegistrant.*
 
 
 # Security
-Runner/WebinarX-Firebase.plist
+Runner/GoogleService-Info.plist
+Runner/Info.plist

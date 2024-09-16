@@ -30,6 +30,7 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
+.env
 
 # Symbolication related
 app.*.symbols
@@ -43,5 +44,6 @@ app.*.map.json
 /android/app/release
 
 # Security
-ios/Runner/WebinarX-Firebase.plist
+ios/Runner/GoogleService-Info.plist
 android/app/google-services.json
+ios/Runner/Info.plist

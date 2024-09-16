@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:webinar_x/themes/colors.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -8,36 +9,65 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  int _page = 0;
+
+  void onPageChanged(int page) {
+    setState(() {
+      _page = page;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar:
-          BottomNavigationBar(items: const <BottomNavigationBarItem>[
-        BottomNavigationBarItem(
-          icon: Icon(
-            Icons.comment_bank,
+      appBar: AppBar(
+        elevation: 0,
+        title: const Text(
+          'Chatting',
+          style: TextStyle(
+            color: textColor,
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
           ),
-          label: 'Chatting',
         ),
-        BottomNavigationBarItem(
-          icon: Icon(
-            Icons.lock_clock,
+        centerTitle: true,
+        backgroundColor: primaryColor,
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: primaryColor,
+        selectedItemColor: navigationColor,
+        unselectedItemColor: secondaryColor,
+        unselectedFontSize: 10,
+        currentIndex: _page,
+        onTap: onPageChanged,
+        type: BottomNavigationBarType.fixed,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.comment_bank,
+            ),
+            label: 'Chatting',
           ),
-          label: 'Meetings',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(
-            Icons.person_outline,
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.meeting_room,
+            ),
+            label: 'Meetings',
           ),
-          label: 'Contacts',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(
-            Icons.settings_outlined,
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.person_outline,
+            ),
+            label: 'Contacts',
           ),
-          label: 'Settings',
-        ),
-      ]),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.settings_outlined,
+            ),
+            label: 'Settings',
+          ),
+        ],
+      ),
     );
   }
 }

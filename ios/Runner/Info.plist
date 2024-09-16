@@ -56,5 +56,16 @@
 	<string>This app needs microphone access for voice input.</string>
 	<key>MinimumOSVersion</key>
 	<string>13.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.868273097771-8oc7fq88ls52r9640m85rpqs7ne2t2kb</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>

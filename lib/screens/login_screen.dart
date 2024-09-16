@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:webinar_x/services/auth_method.dart';
 import 'package:webinar_x/themes/colors.dart';
 import 'package:webinar_x/widgets/custom_button.dart';
 
@@ -10,6 +11,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final AuthMethod _authMethod = AuthMethod();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +36,12 @@ class _LoginScreenState extends State<LoginScreen> {
             text: 'Login with Google',
             icon: Image.asset('lib/assets/images/ic_google.png',
                 width: 30, height: 30),
-            onPressed: () {},
+            onPressed: () async {
+              bool res = await _authMethod.signInWithGoogle(context);
+              if (res) {
+                Navigator.pushNamed(context, '/Home');
+              }
+            },
           ),
         ],
       ),

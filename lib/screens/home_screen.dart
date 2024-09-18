@@ -56,10 +56,21 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               HomeMeetingButton(
                 onPressed: () {},
-                icon: Icons.arrow_upward,
+                icon: Icons.share_rounded,
                 text: 'Share Screen',
               ),
             ],
+          ),
+          Image.asset('lib/assets/images/ic_chat.png'),
+          const Expanded(
+            child: Center(
+              child: Text(
+                'Create or join meeting',
+                style: TextStyle(
+                    fontSize: 14, color: Color.fromARGB(75, 255, 255, 255)),
+                textAlign: TextAlign.center,
+              ),
+            ),
           ),
         ],
       ),

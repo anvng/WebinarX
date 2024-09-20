@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:webinar_x/screens/home_screen.dart';
 import 'package:webinar_x/screens/login_screen.dart';
+import 'package:webinar_x/screens/video_call_screen.dart';
 import 'package:webinar_x/services/auth_method.dart';
 import 'package:webinar_x/themes/colors.dart';
 
@@ -25,6 +26,7 @@ class WebinarX extends StatelessWidget {
       routes: {
         '/Login': (context) => const LoginScreen(),
         '/Home': (context) => const HomeScreen(),
+        '/VideoCall': (context) => const VideoCallScreen(),
       },
       home: StreamBuilder(
         stream: AuthMethod().authChanges,

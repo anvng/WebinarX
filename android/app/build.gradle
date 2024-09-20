@@ -6,9 +6,8 @@ plugins {
 }
 
 android {
-    namespace = "com.example.webinar_x" 
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    namespace "com.example.webinar_x"
+    compileSdk 34
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -19,10 +18,14 @@ android {
         jvmTarget = JavaVersion.VERSION_1_8
     }
 
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
     defaultConfig {
         applicationId = "com.example.webinar_x"
         minSdk = 23
-        targetSdk = flutter.targetSdkVersion
+        targetSdk = 34
         versionCode = flutter.versionCode
         versionName = flutter.versionName
 
@@ -32,6 +35,8 @@ android {
     buildTypes {
         release {
             signingConfig = signingConfigs.debug
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 }
@@ -42,4 +47,5 @@ flutter {
 
 dependencies {
     implementation platform('com.google.firebase:firebase-bom:33.3.0')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22"
 }

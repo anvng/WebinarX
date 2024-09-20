@@ -5,6 +5,8 @@
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
 
     <application
+        tools:replace="android:label"  
+        android:name="your.application.name"
         android:label="webinar_x"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">

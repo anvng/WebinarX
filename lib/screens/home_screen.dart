@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:webinar_x/themes/colors.dart';
-import 'package:webinar_x/widgets/home_meeting_button.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -34,43 +33,11 @@ class _HomeScreenState extends State<HomeScreen> {
         centerTitle: true,
         backgroundColor: primaryColor,
       ),
-      body: Column(
+      body: const Column(
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              HomeMeetingButton(
-                onPressed: () {},
-                icon: Icons.video_call,
-                text: 'New',
-              ),
-              HomeMeetingButton(
-                onPressed: () {},
-                icon: Icons.add_box,
-                text: 'Join',
-              ),
-              HomeMeetingButton(
-                onPressed: () {},
-                icon: Icons.calendar_today,
-                text: 'Schedule',
-              ),
-              HomeMeetingButton(
-                onPressed: () {},
-                icon: Icons.share_rounded,
-                text: 'Share Screen',
-              ),
-            ],
-          ),
-          Image.asset('lib/assets/images/ic_chat.png'),
-          const Expanded(
-            child: Center(
-              child: Text(
-                'Create or join meeting',
-                style: TextStyle(
-                    fontSize: 14, color: Color.fromARGB(75, 255, 255, 255)),
-                textAlign: TextAlign.center,
-              ),
-            ),
+            children: [],
           ),
         ],
       ),

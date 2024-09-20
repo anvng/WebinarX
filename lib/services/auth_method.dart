@@ -10,6 +10,8 @@ class AuthMethod {
 
   Stream<User?> get authChanges => _auth.authStateChanges();
 
+  get user => null;
+
   Future<bool> signInWithGoogle(BuildContext context) async {
     bool result = false;
     try {
@@ -39,7 +41,6 @@ class AuthMethod {
         result = true;
       }
     } on FirebaseAuthException catch (e) {
-      // ignore: use_build_context_synchronously
       showSnackBar(context, e.message!);
       result = false;
     }

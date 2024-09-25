@@ -24,8 +24,9 @@ Multi-platform online meeting application for mobile.
 
 ------
 #### Demo:
-  <img src="https://raw.githubusercontent.com/anvng/description-image-archive/main/WebinarX/img/shot-chatting.png" /> <br> Figure 1. Navigation screen on emulator
+  <img src="https://raw.githubusercontent.com/anvng/description-image-archive/main/WebinarX/img/shot-chatting.png" />
+      Figure 1. Navigation screen on emulator
 
 ------
 
-###### This is an application for learning and practice purposes, so reference sources should be used during the research process. Thank you!
+###### Note: This is an application for learning and practice purposes, so reference sources should be used during the research process. Thank you!
